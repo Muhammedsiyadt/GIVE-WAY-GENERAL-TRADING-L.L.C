@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Milla Grace';
+  src: url('/fonts/ZCOOL_XiaoWei/OFL.txt') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+    font-family: 'Milla Grace';
+}
+
+h6, h5, h1, h2,h3,h4,p,span, b{
+    font-family: 'Milla Grace';
+}
 /********** Template CSS **********/
 :root {
     --primary: #D81324;
@@ -260,7 +274,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--primary);
+    background-color: #ffffffe7;
     transform: scale(0);
     transition: .5s;
 }
@@ -268,6 +282,20 @@
 .team-item:hover .team-overlay {
     transform: scale(1);
 }
+
+.team-item:hover .proName {
+    color: #ffffff;
+    background-color: #ff0000;
+}
+
+.team-item:hover h5 {
+    color: #ffffff;
+}
+
+.proName{
+    background-color: #eee7e741;
+}
+
 
 .team-item .team-overlay .btn {
     color: var(--primary);
@@ -416,6 +444,56 @@
 .feature .feature-item:hover .featureicon{
     color: #ff0000;
 }
+
+
+.genuineused:hover{
+    transition: 0.4s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.genuineused {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
+}
+
+
+
+
+@media (max-width: 768px) { 
+    .genuineused p {
+        display: none; 
+    }
+    
+
+    .genuineused h5 {
+        font-size: 15px 
+    }
+}
+
+@media (min-width: 769px) {
+    .genuineused p {
+        display: block; 
+    }
+}
+
+.d-flex .filter-btn.active {
+    background-color: red !important; 
+    color: white;
+}
+
+@media (max-width: 576px) {
+    .filter-btn {
+        font-size: 14px; 
+    }
+}
+
+
+
+
+
+
 
 
 
