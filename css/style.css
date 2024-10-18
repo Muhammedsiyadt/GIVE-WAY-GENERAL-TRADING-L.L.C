@@ -544,11 +544,6 @@ h6, h5, h1, h2,h3,h4,p,span, b{
     border: 0;
 }
 
-
-.gallery {
-    
-}
-
 .gallery-item {
     overflow: hidden;
     border-radius: 8px; 
