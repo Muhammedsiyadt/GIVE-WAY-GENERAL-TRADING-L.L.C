@@ -155,35 +155,35 @@
                 <div class="col-md-6">
                     <div class="wow fadeInUp" data-wow-delay="0.2s">
                         
-                        <form>
-                            <div class="row g-3 ">
+                        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                            <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
                                         <label for="name">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="number" class="form-control" id="phone" placeholder="Your Phone">
+                                        <input type="number" class="form-control" id="phone" name="phone" placeholder="Your Phone">
                                         <label for="phone">Phone</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
                                         <label for="subject">Subject</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 60px"></textarea>
+                                        <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 60px"></textarea>
                                         <label for="message">Message</label>
                                     </div>
                                 </div>
@@ -266,6 +266,78 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- Include jQuery and jQuery Validation Plugin -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.19.3/jquery.validate.min.js"></script>
+<script src="/js/validate.js"></script>
+
+<!-- jQuery Form Validation Script -->
+<script>
+    $(document).ready(function() {
+        $("#contactForm").validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                phone: {
+                    required: true,
+                    number: true,
+                    minlength: 10,
+                    maxlength: 15
+                },
+                subject: {
+                    required: true,
+                    minlength: 5
+                },
+                message: {
+                    required: true,
+                    minlength: 10
+                }
+            },
+            messages: {
+                name: {
+                    required: "Please enter your name",
+                    minlength: "Your name must be at least 2 characters long"
+                },
+                email: {
+                    required: "Please enter your email address",
+                    email: "Please enter a valid email address"
+                },
+                phone: {
+                    required: "Please enter your phone number",
+                    number: "Please enter a valid phone number",
+                    minlength: "Your phone number must be at least 10 digits long",
+                    maxlength: "Your phone number must not exceed 15 digits"
+                },
+                subject: {
+                    required: "Please enter the subject",
+                    minlength: "Subject must be at least 5 characters long"
+                },
+                message: {
+                    required: "Please enter a message",
+                    minlength: "Your message must be at least 10 characters long"
+                }
+            },
+            errorElement: 'div',
+            errorPlacement: function(error, element) {
+                error.addClass('invalid-feedback');
+                element.closest('.form-floating').append(error);
+            },
+            highlight: function(element) {
+                $(element).addClass('is-invalid');
+            },
+            unhighlight: function(element) {
+                $(element).removeClass('is-invalid');
+            }
+        });
+    });
+</script>
 
 
     <!-- JavaScript Libraries -->
