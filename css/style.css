@@ -274,14 +274,29 @@ h6, h5, h1, h2,h3,h4,p,span, b{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ffffffe7;
     transform: scale(0);
     transition: .5s;
 }
 
+.team-item img {
+    transition: transform 0.5s ease; 
+}
+
+.team-item:hover img {
+    transform: scale(1.2); 
+
+}
+
+
+.team-item{
+    border: #000000 solid 1px;
+}
+
+
 .team-item:hover .team-overlay {
     transform: scale(1);
 }
+
 
 .team-item:hover .proName {
     color: #ffffff;
@@ -488,6 +503,72 @@ h6, h5, h1, h2,h3,h4,p,span, b{
         font-size: 14px; 
     }
 }
+
+
+
+/* Target the specific class */
+@media (max-width: 768px) {
+    /* Decrease font size for smaller screens */
+    .responsive-layout .col-sm-12 h5 {
+        display: none; 
+    }
+
+    /* Keep the columns 6-6 (50% width each) */
+    .responsive-layout .col-sm-12 {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    /* Reset font size for larger screens */
+    .responsive-layout .col-md-12 h5 {
+        font-size: 18px; /* Default font size */
+    }
+}
+
+
+.map-responsive {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* This gives the container a 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+.gallery {
+    
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px; 
+    border: #D81324 solid 1px;
+    position: relative;
+    cursor: pointer; 
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 220px; /* Fixed height to keep images uniform */
+    object-fit: cover; /* Ensures that images cover the entire area without distortion */
+    transition: transform 0.3s; /* Optional: adds a transition effect on hover */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05); /* Optional: scales the image slightly on hover */
+}
+
+
 
 
 
