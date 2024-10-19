@@ -110,7 +110,7 @@ function verifyRecaptcha($recaptchaSecretKey, $recaptchaResponse)
 // Check if the request method is POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Verify reCAPTCHA
-    $recaptchaSecretKey = '6LdfHmEqAAAAABQJqECqgjYm15CdeCL5WMhe6QqW'; // Replace with your actual secret key
+    $recaptchaSecretKey = '6LeIz2UqAAAAAE_QVPxc6ad7G-b1lLW7HtiP0OPO'; 
     $recaptchaResponse = isset($_POST['g-recaptcha-response']) ? $_POST['g-recaptcha-response'] : '';
 
     $recaptchaResult = verifyRecaptcha($recaptchaSecretKey, $recaptchaResponse);
