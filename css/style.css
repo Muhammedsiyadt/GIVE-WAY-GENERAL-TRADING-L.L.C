@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 @font-face {
     font-family: 'ConthraxSb-Regular';
     src: url('../fonts/conthrax/conthrax-sb.otf') format('truetype');
@@ -16,13 +18,13 @@
       font-family: 'Milla Grace';
   } */
   
-  h6, h5, h1, h2,h3,h4,p,span,small,a,div, b{
+  h6, h5, h1, h2,h3,h4{
       font-family: 'ConthraxSb-Regular';
   }
   
-  /* p,small {
-      font-family: 'Milla Grace';
-  } */
+  p,small, li{
+    font-family: "Roboto", sans-serif;
+  }
   /********** Template CSS **********/
   :root {
       --primary: #D81324;
@@ -151,6 +153,10 @@
   .navbar-light.sticky-top {
       top: -100px;
       transition: .5s;
+  }
+
+  .nav-item{
+    font-family: 'ConthraxSb-Regular';
   }
   
   @media (min-width: 992px) {
