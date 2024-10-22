@@ -5,8 +5,8 @@
     src: url('../fonts/conthrax/conthrax-sb.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
-  }
-  
+  } 
+   
   @font-face {
       font-family: 'Milla Grace';
       src: url('../fonts/ZCOOL_XiaoWei/ZCOOLXiaoWei-Regular.ttf') format('truetype');
