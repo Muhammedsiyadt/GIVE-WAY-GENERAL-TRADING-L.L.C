@@ -6,10 +6,10 @@ require 'vendor/phpmailer/phpmailer/src/Exception.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 
-define("ADMINMAIL", "nikhilthomas789@gmail.com");
+define("ADMINMAIL", "nikhilthomas789@gmail.com"); 
 define("SITE", "Give Way General Trading LLC");
 define("FROMMAIL", "givewayparts@gmail.com");
-define("SENDER_MAIL", "givewayparts@gmail.com");
+define("SENDER_MAIL", "givewayparts@gmail.com"); 
 
 function sendEmail($toEmail, $emailSubject = '', $messageBody = '', $attachments = null, $ccEmail = null, $bccEmail = null)
 {
